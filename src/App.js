@@ -26,12 +26,12 @@ export default class App extends Component {
                             path="/workout/:" 
                             render={(routerProps) => <WorkoutPage {...routerProps} />} 
                         />
-                        <Route 
+                        {/* <Route 
                             path="/aboutMe/:" 
                             render={(routerProps) => <AboutMe {...routerProps} />} 
-                        />
+                        /> */}
                     </Switch>
-                    
+                    <AboutMe/>
                 </Router>
                
               </div>

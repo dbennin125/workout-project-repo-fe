@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
+import SingleItem from './SingleItem';
 
 
 
@@ -18,15 +19,7 @@ export default class WorkoutList extends Component {
                 <h2>WorkoutList:</h2>
                 {
                     this.state.workouts.map(workout => {
-                        return <li>
-                           <p>Workout Name: {workout.name}</p> 
-                            <p>Weight: {workout.weight}</p>
-                            <p>{workout.is_fullbody
-                            ? 'it is a full body workout'
-                            : 'it is not a full body workout'}
-                            </p>
-                            <p>Type of workout: {workout.type}</p>
-                        </li>
+                            return<SingleItem workout= {workout} />
                         
                     }) 
                 }
