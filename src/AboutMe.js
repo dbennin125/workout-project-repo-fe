@@ -6,7 +6,7 @@ export default class AboutMe extends Component {
             <div>
                 <h2>My Name is Dan Bennington</h2> 
                 <p>and this is my fullstack app!</p>
-                <a href='https://www.linkedin.com/in/dan-bennington-4070451a5/'>My Profile</a>/>
+                <a href='https://www.linkedin.com/in/dan-bennington-4070451a5/'>My Profile</a>
             </div>
         )
     }
