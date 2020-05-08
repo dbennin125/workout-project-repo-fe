@@ -28,7 +28,7 @@ export default class App extends Component {
                             render={(routerProps) => <WorkoutList {...routerProps} />} 
                         />
                                                 <Route 
-                            path="/workout" 
+                            path="/workout:id" 
                             render={(routerProps) => <WorkoutPage {...routerProps} />} 
                         />
                         <Route 
