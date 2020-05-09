@@ -8,11 +8,11 @@ export default class Header extends Component {
             <div>
                 <h1>Welcome to the Gym!</h1>
                 <nav>
-                   <a href="./">Home</a>
+                   <a href="../">Home</a>
                    <p>
-                    <a href="workouts">WorkoutList</a>
+                    <a href="../workouts">WorkoutList</a>
                     </p>
-                    <a href="aboutMe">About Me</a>
+                    <a href="/aboutMe">About Me</a>
                 </nav>
                 <p>Let's get swole.</p>
             </div>

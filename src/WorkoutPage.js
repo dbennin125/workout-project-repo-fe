@@ -7,17 +7,23 @@ import SingleItem from './SingleItem.js'
 export default class WorkoutPage extends Component {
 
 state = {
-    workout: {}
+    workoutId: {}
 }
  async componentDidMount() {
-    const data = await request.get(`https://calm-escarpment-70276.herokuapp.com/ex?search=${this.props.match.params.name}`);
-    this.setState({ workout: data.body.results[0] })
+    const data = await request.get(`https://calm-escarpment-70276.herokuapp.com/exercises/${this.props.match.params.id}`);
+    this.setState({ workoutId: data.body })
+    // console.log(this.state.workoutId)
 }
+
     render() {
-       
+    //    console.log(this.state.workoutId)
         return <div>
             <h2>
-                <SingleItem workout={this.state.workout} />
+                {
+                this.state.workoutId    
+                ?<SingleItem workout={this.state.workoutId} />
+                : <img src="https://s3.scoopwhoop.com/anj/loading/594155876.gif" alt="loading" />
+                }
             </h2>
         </div>
     }
