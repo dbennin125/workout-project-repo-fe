@@ -82,7 +82,7 @@ handleTypeChange = (e) => {
                 Type
                 <input onChange={this.handleTypeChange} value={type} name="Type" />
                 </lable>
-
+            <button>Submit request</button>
             </form>
             </div>
         )
