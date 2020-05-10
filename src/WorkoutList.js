@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import request from 'superagent';
+// import request from 'superagent';
 import SingleItem from './SingleItem';
+import { getExercises } from './Api-Calls.js'
 
 
 
@@ -9,7 +10,7 @@ export default class WorkoutList extends Component {
     state= { workouts: [] }
     //fetching data from API we wrote
     componentDidMount =  async () => {
-        const data = await request.get(`https://calm-escarpment-70276.herokuapp.com/exercises`)
+        const data = await getExercises(this.state)
         this.setState({ workouts: data.body })
     }
     
