@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import AboutMe from './AboutMe.js'
-// import WorkoutList from './WorkoutList.js'
 
+//the nav worked better at pointing were to go than 
+//just linking
 export default class Header extends Component {
     render() {
         return (

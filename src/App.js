@@ -10,7 +10,7 @@ import Header from './Header.js';
 import AboutMe from './AboutMe.js';
 import HomePage from './HomePage.js'
 
-
+//route page, pretty standard. I could make a searchbar if I wanted since I have a search by name backend point as well. 
 export default class App extends Component {
     render() {
         return (
