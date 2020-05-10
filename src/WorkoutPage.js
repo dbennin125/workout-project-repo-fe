@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import request from 'superagent';
+// import request from 'superagent';
 import SingleItem from './SingleItem.js'
+import { getExercise } from './Api-Calls.js'
 
 
 
@@ -10,18 +11,22 @@ state = {
     workoutId: null
 }
  async componentDidMount() {
-    const data = await request.get(`https://calm-escarpment-70276.herokuapp.com/exercises/${this.props.match.params.id}`);
-    this.setState({ workoutId: data.body })
+    //fetching data from api call with you id from the link on singleitem.js
+    const fetchedData = await getExercise(this.props.match.params.id);
+    //setting state to fetchedData
+    this.setState({ workoutId: fetchedData })
     // console.log(this.state.workoutId)
 }
 
     render() {
     //    console.log(this.state.workoutId)
+    const {workoutId} = this.state;
+    //practicing deconstructors
         return <div>
             <h2>
             {
-                this.state.workoutId    
-                ? <SingleItem workout={this.state.workoutId} />
+                workoutId
+                ? <SingleItem workout={workoutId} />
                 : <img src='https://s3.scoopwhoop.com/anj/loading/594155876.gif' alt='loading' />}
             
             </h2>
