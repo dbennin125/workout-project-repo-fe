@@ -10,6 +10,7 @@ import Header from './Header.js';
 import AboutMe from './AboutMe.js';
 import HomePage from './HomePage.js';
 import AdminPage from './AdminPage.js';
+import SearchByName from './SearchByName.js'
 
 //route page, pretty standard. I could make a searchbar if I wanted since I have a search by name backend point as well. 
 export default class App extends Component {
@@ -31,6 +32,10 @@ export default class App extends Component {
                         <Route 
                             path="/workout/:id" 
                             render={(routerProps) => <WorkoutPage {...routerProps} />} 
+                        />
+                        <Route 
+                            path="/workoutName" 
+                            render={(routerProps) => <SearchByName {...routerProps} />} 
                         />
                         <Route 
                             path="/aboutMe" 

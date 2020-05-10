@@ -19,7 +19,7 @@ export default class WorkoutList extends Component {
                 <h2>WorkoutList:</h2>
                 {
                     this.state.workouts.map(workout => {
-                            return<SingleItem workout= {workout} />
+                        return<SingleItem workout= {workout} />
                         
                     }) 
                 }

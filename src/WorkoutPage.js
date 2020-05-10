@@ -5,9 +5,9 @@ import SingleItem from './SingleItem.js'
 
 
 export default class WorkoutPage extends Component {
-
+//this.props.match.params.id is coming the link in singleitem.js
 state = {
-    workoutId: {}
+    workoutId: null
 }
  async componentDidMount() {
     const data = await request.get(`https://calm-escarpment-70276.herokuapp.com/exercises/${this.props.match.params.id}`);
