@@ -26,7 +26,7 @@ export default class WorkoutList extends Component {
         const { workouts, loadingPage } = this.state
         return (
             <div className="workoutListContainer">
-                <h2 className="workoutTitle">WorkoutList:</h2>
+                <h2>WorkoutList:</h2>
     
                 {   
                 
@@ -35,7 +35,7 @@ export default class WorkoutList extends Component {
                     : workouts.map(workout => {
                         return<SingleItem key="newList" workout= {workout} />
                     })
-                      
+
                 }
                 
             </div>

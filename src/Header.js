@@ -14,6 +14,7 @@ export default class Header extends Component {
                     <a href="../workouts">WorkoutList</a>
                     </p>
                     <a href="/aboutMe">About Me</a>
+                    <p><a href="/admin">Admin</a></p>
                 </nav>
                 <p>Let's get swole.</p>
             </div>

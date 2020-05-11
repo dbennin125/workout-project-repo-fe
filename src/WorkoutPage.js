@@ -22,7 +22,7 @@ state = {
     //    console.log(this.state.workoutId)
     const {workoutId} = this.state;
     //practicing deconstructors
-        return <div>
+        return <div className="workoutPageContainer">
             <h2>
             {
                 workoutId
