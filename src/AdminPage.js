@@ -56,33 +56,33 @@ handleTypeChange = (e) => {
         const { name, weight, is_fullbody, type } = this.state;
         return (
             <div className="submit-container">
-            <form onSubmit={this.handleSubmit}>
+            <form className="form"onSubmit={this.handleSubmit}>
                 <h2>Hello this is the admin page. Add exercises as needed.</h2>
                 <lable>
-                Name
+                Name: 
                 <input onChange={this.handleNameChange} value={name} name="Name" />
                 </lable>
                 
                 <lable>
-                Weight
+                Weight: 
                 <input onChange={this.handleWeightChange} value={weight} name="Weight" />
                 </lable>
 
                 <label>
-                    Is a full body workout
                     <input onChange={this.handleIs_fullbody} checked={ is_fullbody === '1' } name="is_fullbody" type="radio" value="1" />
+                    Is a full body workout
                 </label>
 
                 <label>
-                    Is NOT a full body workout
                     <input onChange={this.handleIs_fullbody} checked={ is_fullbody === '0' } name="is_fullbody" type="radio" value="0" />
+                    Is NOT a full body workout
                 </label>
                 
                 <lable>
-                Type
+                Type: 
                 <input onChange={this.handleTypeChange} value={type} name="Type" />
                 </lable>
-            <button>Submit request</button>
+            <button className="button">Submit request</button>
             </form>
             </div>
         )

@@ -1,38 +1,77 @@
-.App {
+*{
+box-sizing: border-box;
+
+
+}
+.headerContainer {
+  height: 20%;
+  width: 100%; 
+  background-color: black;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-bottom: aqua 10px;
+  border-style: solid;
+  
+ 
+}
+.workoutListContainer {
+  height: 75%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: darkslategrey;
+  color: aquamarine;
+  list-style: none;
+  
+}
+
+a:link {
+  color: steelblue;
+  padding: 10px 10px;
+  text-align: center;
+}
+a:visited {
+  color: rgba(236, 210, 210, 0.212);
+  
+}
+.exerciseList {
+  height: 50%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.workoutPageContainer {
+  height: 80%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(140, 165, 165);
+  color: rgb(1, 2, 1);
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.submit-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: thistle;
+}
+.form {
+  height: 31em;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: thistle;  
+}
+.form button{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }

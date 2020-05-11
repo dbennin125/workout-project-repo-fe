@@ -10,7 +10,7 @@ export default class SingleItem extends Component {
         //I did make a back for workout names so in the future, I could use
         //workout.name for a search bar if I wanted as well.
         return (
-            <li>
+            <li name="exerciseList">
                 <Link to={`/workout/${this.props.workout.id}`}>
 
                     <h2>Workout Name: {this.props.workout.name}</h2> 
