@@ -8,7 +8,7 @@ import { getExercise } from './Api-Calls.js'
 export default class WorkoutPage extends Component {
 //this.props.match.params.id is coming the link in singleitem.js
 state = {
-    workoutId: null
+    workoutId: {}
 }
  async componentDidMount() {
     //fetching data from api call with your id from the link on singleitem.js

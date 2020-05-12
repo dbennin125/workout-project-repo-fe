@@ -8,6 +8,11 @@ export const getExercise = async (workoutId) => {
     return data.body;
 }
 
+// export const deleteExercise = async (workoutId) => {
+//     const data = await request.delete(`${backendURL}/exercises/${workoutId}`)
+//     return data.body;
+// }
+
 //goes to workout list, displays all the lists
 export const getExercises = async () => {
     const data = await request.get(`${backendURL}/exercises/`)

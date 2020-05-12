@@ -7,12 +7,14 @@ export default class SingleItem extends Component {
         //name later) which will bring you to App.js route page `/workout/`
         //used specifically to display one workout (by Id) which is selected
         
+
+//line17 workout.id is the problem. it's not pointing to anything
+
         //I did make a back for workout names so in the future, I could use
         //workout.name for a search bar if I wanted as well.
         return (
             <li name="exerciseList">
                 <Link to={`/workout/${this.props.workout.id}`}>
-
                     <h2>Workout Name: {this.props.workout.name}</h2> 
                 </Link>
                 

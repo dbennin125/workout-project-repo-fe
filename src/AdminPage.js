@@ -8,17 +8,17 @@ export default class AdminPage extends Component {
         name: '',
         weight: 0,
         is_fullbody: false,
-        type: '',
+        type: 0,
     
     }    
 //create my handle for submitting form
 handleSubmit = async (e) => {
     e.preventDefault();
-    const newExercise = await request.post(`https://calm-escarpment-70276.herokuapp.com/exercises/`, {
+    const newExercise = await request.post(`https://mysterious-chamber-18797.herokuapp.com/exercises/`, {
         name: this.state.name,
         weight: this.state.weight,
         is_fullbody: this.state.is_fullbody,
-        type: this.state.type,
+        type: this.state.type_id,
     })
     console.log('======');
     console.log(newExercise, 'hello');
@@ -78,10 +78,11 @@ handleTypeChange = (e) => {
                     Is NOT a full body workout
                 </label>
                 
-                <lable>
+                {/* <lable>
+                //had to hard code in API to make it run for next assignment, it did work tho. 
                 Type: 
                 <input onChange={this.handleTypeChange} value={type} name="Type" />
-                </lable>
+                </lable> */}
             <button className="button">Submit request</button>
             </form>
             </div>
