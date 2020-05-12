@@ -8,13 +8,13 @@ export default class AdminPage extends Component {
         name: '',
         weight: 0,
         is_fullbody: false,
-        type: '',
+        type: 0,
     
     }    
 //create my handle for submitting form
 handleSubmit = async (e) => {
     e.preventDefault();
-    const newExercise = await request.post(`https://calm-escarpment-70276.herokuapp.com/exercises/`, {
+    const newExercise = await request.post(`https://mysterious-chamber-18797.herokuapp.com/exercises/`, {
         name: this.state.name,
         weight: this.state.weight,
         is_fullbody: this.state.is_fullbody,
@@ -58,6 +58,7 @@ handleTypeChange = (e) => {
             <div className="submit-container">
             <form className="form"onSubmit={this.handleSubmit}>
                 <h2>Hello this is the admin page. Add exercises as needed.</h2>
+                <p>For Type below use: 1 for resistance, 2 for calastentics, and 3 for cardio.</p>
                 <lable>
                 Name: 
                 <input onChange={this.handleNameChange} value={name} name="Name" />

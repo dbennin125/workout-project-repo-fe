@@ -19,6 +19,7 @@ state = {
     this.setState({ workoutId: fetchedData })
     // console.log(this.state.workoutId)
 }
+
 handleSubmit = async (e) => {
     e.preventDefault();
     const updateNameDate = await request.put(`https://mysterious-chamber-18797.herokuapp.com/exercises/${this.props.match.params.id}`, 
@@ -33,7 +34,8 @@ handleSubmit = async (e) => {
 
 handleNameChange = (e) => {
     this.setState({ name: e.target.value });
-    console.log(this.state.name)
+    // console.log(this.state.name)
+    //state works
 } 
     render() {
     //    console.log(this.state.workoutId)
