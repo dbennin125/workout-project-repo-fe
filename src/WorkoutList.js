@@ -7,7 +7,7 @@ import { getExercises } from './Api-Calls.js'
 
 export default class WorkoutList extends Component {
     //set state
-    state = { workouts: [] }
+    state = { workouts: [], filter: '' }
     //fetching data from API we wrote
     componentDidMount =  async () => {
         
@@ -21,22 +21,33 @@ export default class WorkoutList extends Component {
         // console.log(this.state.workouts)
         //add loading state
     }
-    
+
+    handleFilter = (e) => {
+        this.setState({ filter: e.target.value })
+    }
     render() {
+        // console.log(this.state.filter);
         const { workouts, loadingPage } = this.state
         return (
             <div className="workoutListContainer">
                 <h2>WorkoutList:</h2>
+                <select onChange={this.handleFilter}>
+                    <option value="">Choose</option>
+                    <option value="resistance">Res</option>
+                    <option value="Cardio">Car</option>
+                    <option value="calastenticse">calastentics</option>
+                
+                </select>
     
                 {   
                 
-                    loadingPage
-                    ?<img src='https://s3.scoopwhoop.com/anj/loading/594155876.gif' alt='loading' />
-                    : workouts.map(workout => {
-                        return<SingleItem key="newList" workout= {workout} />
-                    })
-
-                }
+                loadingPage
+                ?<img src='https://s3.scoopwhoop.com/anj/loading/594155876.gif' alt='loading' />
+                : workouts.map(workout => {
+                    return<SingleItem key="newList" workout= {workout} />
+                })
+                
+            }
                 
             </div>
         )

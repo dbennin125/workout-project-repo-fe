@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const backendURL = `https://calm-escarpment-70276.herokuapp.com`;
+const backendURL = `https://mysterious-chamber-18797.herokuapp.com`;
 
 //goes to the workout page, it's just the one exercise
 export const getExercise = async (workoutId) => {

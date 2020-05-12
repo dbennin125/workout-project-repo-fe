@@ -11,7 +11,7 @@ state = {
     workoutId: null
 }
  async componentDidMount() {
-    //fetching data from api call with you id from the link on singleitem.js
+    //fetching data from api call with your id from the link on singleitem.js
     const fetchedData = await getExercise(this.props.match.params.id);
     //setting state to fetchedData
     this.setState({ workoutId: fetchedData })
