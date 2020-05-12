@@ -19,3 +19,7 @@ export const addExercise = async (exercise) => {
     const data = await request.post(`${backendURL}/exercises/`, exercise) 
     return data.body;
 }
+export const updateName = async (workoutId, name) => {
+    const data = await request.put(`${backendURL}/exercises/${workoutId}`, name) 
+    return data.body;
+}
