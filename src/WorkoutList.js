@@ -26,7 +26,7 @@ export default class WorkoutList extends Component {
         this.setState({ filter: e.target.value })
     }
     render() {
-        // console.log(this.state.filter);
+        console.log(this.state.filter);
         const { workouts, loadingPage } = this.state
         return (
             <div className="workoutListContainer">
@@ -43,7 +43,12 @@ export default class WorkoutList extends Component {
                 
                 loadingPage
                 ?<img src='https://s3.scoopwhoop.com/anj/loading/594155876.gif' alt='loading' />
-                : workouts.map(workout => {
+                : workouts
+                .filter(workout => {
+                    if(!workouts.filter) return true;
+                    return workout.type === workouts.filter
+                })
+                .map(workout => {
                     return<SingleItem key="newList" workout= {workout} />
                 })
                 
